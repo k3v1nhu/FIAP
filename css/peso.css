@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    position: relative;
+    min-width: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    position: relative;
+    top: 55px;
+}
+.logo img {
+    width: 45px;
+    height: 35px;
+}
+
+.logo h2 {
+    font-family: 'Qwigley', cursive;
+    font-size: 40px;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 73px;
+    background: #b80707;
+    padding: 6px 14px;
+    transition: all 1s ease;
+}
+
+.sidebar.active:not(.row) {
+    width: 240px;
+}
+
+.sidebar .logo_content .logo {
+    color: white;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+}
+
+.sidebar #btn {
+    color: white;
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 6px;
+    font-size: 20px;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    transition: all 1s ease;
+}
+
+.sidebar.active #btn {
+    left: 80%;
+}
+
+.sidebar ul {
+    position: relative;
+    margin-top: 70px;
+    right: -8px;
+}
+
+.sidebar ul li {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin: 0px 5px;
+    list-style: none;
+    line-height: 50px;
+    align-items: center;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar ul:focus {
+    border-left: 3px solid #fff;
+}
+
+.sidebar ul li a i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+ #logout {
+    position: relative;
+    bottom: -230px;
+}
+
+.main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 93px;
+    transition: all 1s ease;
+}
+
+.sidebar.active ~ .main {
+    width: calc(100% - 240px);
+    left: 270px;
+}
+
+/* Estilizar o conteúdo a partir daqui, manter igual nos outros */
+
+.header {
+    height: 150px;
+}
+
+.header h2 {
+    display: flex;
+    color: rgb(49, 49, 49);
+    font-weight: bold;
+}
+
+.header i {
+    align-items: center;
+}
+
+.card-peso-atual .card{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.card-peso-meta .card{
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#kilos{
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 20px;
+    color: chartreuse;
+}
+
+#kilos2{
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    justify-content: center;
+    font-size: 50px;
+    margin-top: 20px;
+    color: rgba(86, 255, 239, 1)
+}
+
+.table-content-user {
+    width: 60%;
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.table-content-user a {
+    text-decoration: none;
+    color: rgb(80, 79, 79);
+    padding: 5px;
+}
+
+.table-content-user a i{
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    margin-top: 25px;
+}
+
+.header #btn-add{
+    background-color: #b80707;
+    border: none;
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.header #btn-add i{
+    font-size: 30px;
+    margin: 0;
+}

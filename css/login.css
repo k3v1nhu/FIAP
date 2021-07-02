@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    flex-direction: row;
+    display: flex;
+}
+
+.login {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.login-form {
+    width: 400px;
+}
+
+#Password:placeholder-shown, #Email:placeholder-shown {
+    color: rgb(212, 212, 212);
+}
+
+.title-app {
+    display: flex;
+}
+
+.title-app h2 {
+    margin-bottom: 30px;
+    margin-left: 10px;
+    color: #b80707;
+    font-family: 'Qwigley', cursive;
+    font-size: 70px;
+}
+
+.title-app img {
+    width: 40px;
+    height: 40px;
+    font-size: 50px;
+}
+
+.forgot-password a{
+    color: #b80707;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+    color: #b80707;
+}
+
+.background-area {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    filter: brightness(30%);
+}
+
+.btn {
+    width: 100%;
+    background-color: #b80707;
+    color: white;
+    border: none;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.btn:hover {
+    background-color: white; /* Green */
+    color: #b80707;
+    border: 1px solid  #b80707;
+}

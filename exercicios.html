@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Track</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/exercicios.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <img src="./images/heart.png" alt="heart-logo">
+            </div>
+            <i class='bx bx-menu bx-sm' id="btn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="./dashboard.html">
+                    <i class='bx bx-grid-alt bx-sm'></i>
+                    <span class="links_name">Dashboard</span>
+
+                </a>
+            </li>
+            <li>
+                <a href="./peso.html">
+                    <i class='bx bx-dna bx-sm'></i>
+                    <span class="links_name">Peso</span>
+                    
+                </a>
+            </li>
+            <li>
+                <a href="./medidas.html">
+                    <i class='bx bx-ruler bx-sm'></i>
+                    <span class="links_name">Medidas</span>
+                    
+                </a>
+            </li>
+            <li>
+                <a href="./exercicios.html">
+                    <i class='bx bx-dumbbell bx-sm'></i>
+                    <span class="links_name">Exercícios</span>
+                    
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-cookie bx-sm' ></i>
+                    <span class="links_name">Alimentação</span>
+                    
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-cog bx-sm'></i>
+                    <span class="links_name">Settings</span>
+                    
+                </a>
+            </li>
+            <li id="logout">
+                <a href="./index.html">
+                    <i class='bx bx-log-out nav_icon bx-sm'></i>
+                    <span class="links_name">Sair</span>
+                    
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- O conteúdo começa aqui, manter a estrutura acima nos outros -->
+    <main class="main">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                    <div class="header">
+                            <h2>Exercícios</h2>
+                            <button type="button" class="btn btn-primary" id="btn-add" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat"><i class='bx bx-plus'></i></button>
+
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Calorias Gastas</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="recipient-name" class="col-form-label">Data</label>
+                                                    <input type="date" class="form-control" id="recipient-name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="message-text" class="col-form-label">Calorias Perdidas</label>
+                                                    <input type="number" class="form-control" id="recipient-name">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cadastrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-mb-4">
+                    <div class="card-peso-atual">
+                        <div class="card" style="width: 20rem; height: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Calorías Gastas Hoje</h5>
+                                <p class="card-text" id="kilos">893 Kcal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-mb-4">
+                    <div class="card-peso-meta">
+                        <div class="card" style="width: 20rem; height: 10rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Meta de Calorias</h5>
+                                <p class="card-text" id="kilos2">1.500 Kcal</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <div class="table-content-user">
+                        <table class="table" id="table-data">
+                            <thead>
+                            <tr>
+                                <th scope="col">Dia</th>
+                                <th scope="col">Calorias</th>
+                                <td></td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">15/06/2021</th>
+                                <td>95 kcal</td>
+                                <td>
+                                    <a href="#">
+                                        <i class='bx bx-trash'></i>
+                                        <i class='bx bx-edit' ></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">15/05/2021</th>
+                                <td>100 kcal</td>
+                                <td>
+                                    <a href="#">
+                                        <i class='bx bx-trash'></i>
+                                        <i class='bx bx-edit' ></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">15/04/2021</th>
+                                <td>108 kcal</td>
+                                <td>
+                                    <a href="#">
+                                        <i class='bx bx-trash'></i>
+                                        <i class='bx bx-edit' ></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let btn = document.querySelector("#btn");
+        let sidebar = document.querySelector(".sidebar");
+
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
